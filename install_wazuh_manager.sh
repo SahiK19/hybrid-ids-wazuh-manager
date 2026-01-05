@@ -29,3 +29,6 @@ echo "[INFO] Applying custom local rules"
 cp config/local_rules.xml /var/ossec/etc/rules/local_rules.xml
 chown wazuh:wazuh /var/ossec/etc/rules/local_rules.xml
 chmod 640 /var/ossec/etc/rules/local_rules.xml
+
+
+systemctl restart wazuh-manager
