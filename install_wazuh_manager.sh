@@ -1,4 +1,9 @@
 #!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+  echo "[ERROR] Please run this script as root"
+  exit 1
+fi
+
 set -e
 
 echo "[INFO] Updating system"
